@@ -40,7 +40,13 @@ function part2(input: string): number {
   return commonInGroups.reduce((acc, char) => acc + score(char), 0);
 }
 
+// alternate part2 solution
+function part2_alt(input: string): number {
+  return input.replaceAll(/.*(.).*\n.*\1.*\n.*\1.*/g, "$1").split("\n").reduce((acc, char) => acc + score(char), 0);
+}
+
 runTests("tests.json", part1, part2);
 const input = readFileSync("input.txt", "utf8").trim();
 console.log("Part 1: " + part1(input));
 console.log("Part 2: " + part2(input));
+console.log("Part 2 (alt): " + part2_alt(input));
