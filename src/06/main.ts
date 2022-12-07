@@ -15,7 +15,12 @@ function part2(input: string): string|number {
 	}
 }
 
+function part1_alt(input: string): number {
+	return input.match(/(.)(?!\1)(.)(?!\1|\2)(.)(?!\1|\2|\3)(.)/).index + 3
+}
+
 runTests("tests.json", part1, part2);
 const input = readFileSync("input.txt", "utf8").trim();
 console.log("Part 1: " + part1(input));
+console.log("Part 1 (alt): " + part1(input));
 console.log("Part 2: " + part2(input));

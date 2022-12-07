@@ -16,7 +16,7 @@
 	"part2": [
 		{
 			"input": "test1.txt",
-			"expected": ""
+			"expected": "19"
 		}
 	]
 }
