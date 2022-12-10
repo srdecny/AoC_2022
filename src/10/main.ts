@@ -55,7 +55,7 @@ function part1_alt(input: string): number {
   const res = modifiedInput.reduce(
     (acc, n, idx) => {
       const currentIdx = idx % 40;
-      acc.crt.push(Math.abs(currentIdx - acc.x) >= 2 ? " " : "#");
+      acc.crt.push(Math.abs(currentIdx - acc.x) >= 2 ? " " : "□");
       if ((idx + 1) % 40 == 20) {
         acc.total += (idx + 1) * acc.x;
       }
